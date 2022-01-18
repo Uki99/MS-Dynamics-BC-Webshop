@@ -1,0 +1,36 @@
+{
+  "id": "13da6215-cfac-48a0-98b8-2e64bf435f8c",
+  "name": "WebShop-UC",
+  "publisher": "Ugljesa Ciric",
+  "version": "19.0.0.2021102001",
+  "brief": "Item API for web shop.",
+  "description": "This is an API which is used by Web Shop frontend to retrieve items data for display.",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "432acaf7-84d0-4817-a415-08f90e6a7d20",
+      "publisher": "Be-Terna",
+      "name": "BackEndWebShop-KC",
+      "version": "1.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "19.0.0.0",
+  "idRanges": [
+    {
+      "from": 50125,
+      "to": 50129
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false
+  },
+  "runtime": "8.0"
+}

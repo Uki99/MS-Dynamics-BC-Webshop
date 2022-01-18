@@ -1,0 +1,17 @@
+{
+    "CRS.ExtensionObjectNamePattern": "",
+    "CRS.FileNamePattern": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+    "CRS.FileNamePatternExtensions": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+    "CRS.FileNamePatternPageCustomizations": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+    "CRS.ObjectNamePrefix": "BC",
+    "CRS.ObjectNameSuffix": "",
+    "CRS.RemovePrefixFromFilename": false,
+    "CRS.RenameWithGit": false,
+    "CRS.OnSaveAlFileAction": "Reorganize",
+    "al.codeAnalyzers": [
+      "${CodeCop}",
+      "${UICop}"
+    ],
+    "al.enableCodeActions": true,
+    "al.enableCodeAnalysis": true
+}

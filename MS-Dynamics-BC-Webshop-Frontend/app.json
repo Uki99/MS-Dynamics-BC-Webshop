@@ -1,0 +1,25 @@
+{
+  "id": "907913c2-98a2-416f-99bc-663969d2780c",
+  "name": "WebShopFrontendUC",
+  "publisher": "Ugljesa Ciric",
+  "version": "18.0.0.2021102601",
+  "brief": "WebShop frontend utility",
+  "description": "This extension provides web shop functionality for project at Beterna.",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "18.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "showMyCode": true,
+  "runtime": "7.0"
+}

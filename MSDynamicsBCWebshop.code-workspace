@@ -1,0 +1,12 @@
+{
+    "folders": [
+        {
+            "name": "MS-Dynamics-BC-Webshop-Frontend",
+            "path": "MS-Dynamics-BC-Webshop-Frontend"
+        },
+		{
+			"name": "MS-Dynamics-BC-Webshop-Backend",
+            "path": "MS-Dynamics-BC-Webshop-Backend"
+		}
+    ]
+}
