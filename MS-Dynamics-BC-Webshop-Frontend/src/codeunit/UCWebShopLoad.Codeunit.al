@@ -1,21 +1,21 @@
 /// <summary>
-/// Codeunit BCWebShopLoad (ID 50100).
+/// Codeunit UC Web Shop Load (ID 64902).
 /// </summary>
-codeunit 50100 "BCWebShopLoad"
+codeunit 64902 "UC Web Shop Load"
 {
     trigger OnRun()
     var
-        BCWebShopSetup: Record "BCWeb Shop Setup";
+        UCWebShopSetup: Record "UC Web Shop Setup";
         httpClient: httpClient;
         HttpResponseMessage: HttpResponseMessage;
         ResponseText: Text;
     begin
-        if not BCWebShopSetup.Get() then
+        if not UCWebShopSetup.Get() then
             Error('Failed to read Web Shop setup.\Please, setup the Web Shop setup page first.');
 
-        SetRequestHeader(httpClient, BCWebShopSetup);
+        SetRequestHeader(httpClient, UCWebShopSetup);
 
-        httpClient.Get(StrSubstNo(BackEndWebShopUrlTxt, BCWebShopSetup."Backend Web Service URL"), HttpResponseMessage);
+        httpClient.Get(StrSubstNo(BackEndWebShopUrlTxt, UCWebShopSetup."Backend Web Service URL"), HttpResponseMessage);
 
         if HttpResponseMessage.IsSuccessStatusCode() then begin
             HttpResponseMessage.Content().ReadAs(ResponseText);
@@ -28,7 +28,7 @@ codeunit 50100 "BCWebShopLoad"
     // Parses provided text (JSON) and inserts it into table
     local procedure ParseJson(ResponseText: Text)
     var
-        BCItemUC: Record "BCItem UC";
+        UCWebShopItem: Record "UC Web Shop Item";
         JsonObject: JsonObject;
         JsonToken: JsonToken;
         JsonArray: JsonArray;
@@ -49,23 +49,23 @@ codeunit 50100 "BCWebShopLoad"
 
         foreach ItemJsonToken in JsonArray do begin
             ItemJsonObject := ItemJsonToken.AsObject();
-            BCItemUC.Init();
+            UCWebShopItem.Init();
 
-            BCItemUC."No." := CopyStr(BCJSONUtility.GetFieldValue(ItemJsonObject, 'no').AsCode(), 1, MaxStrLen(BCItemUC."No."));
-            BCItemUC.Name := CopyStr(BCJSONUtility.GetFieldValue(ItemJsonObject, 'name').AsText(), 1, MaxStrLen(BCItemUC.Name));
-            BCItemUC."Unit Price" := BCJSONUtility.GetFieldValue(ItemJsonObject, 'unitPrice').AsDecimal();
-            BCItemUC."Inventory" := BCJSONUtility.GetFieldValue(ItemJsonObject, 'inventory').AsDecimal();
-            BCItemUC.Intern := GetIntern(ItemJsonObject);
-            BCItemUC.Specification := CopyStr(BCJSONUtility.GetFieldValue(ItemJsonObject, 'specification').AsText(), 1, MaxStrLen(BCItemUC.Specification));
+            UCWebShopItem."No." := CopyStr(BCJSONUtility.GetFieldValue(ItemJsonObject, 'no').AsCode(), 1, MaxStrLen(UCWebShopItem."No."));
+            UCWebShopItem.Name := CopyStr(BCJSONUtility.GetFieldValue(ItemJsonObject, 'name').AsText(), 1, MaxStrLen(UCWebShopItem.Name));
+            UCWebShopItem."Unit Price" := BCJSONUtility.GetFieldValue(ItemJsonObject, 'unitPrice').AsDecimal();
+            UCWebShopItem."Inventory" := BCJSONUtility.GetFieldValue(ItemJsonObject, 'inventory').AsDecimal();
+            UCWebShopItem.Intern := GetIntern(ItemJsonObject);
+            UCWebShopItem.Specification := CopyStr(BCJSONUtility.GetFieldValue(ItemJsonObject, 'specification').AsText(), 1, MaxStrLen(UCWebShopItem.Specification));
 
-            loadImage(BCItemUC, ItemJsonObject);
+            loadImage(UCWebShopItem, ItemJsonObject);
 
-            BCItemUC.Insert();
+            UCWebShopItem.Insert();
         end;
     end;
 
     // Sets request header and does authorization
-    local procedure SetRequestHeader(var httpClient: httpClient; var BCWebShopSetup: Record "BCWeb Shop Setup")
+    local procedure SetRequestHeader(var httpClient: httpClient; var BCWebShopSetup: Record "UC Web Shop Setup")
     var
         Base64Convert: Codeunit "Base64 Convert";
         AuthString: Text;
@@ -76,7 +76,7 @@ codeunit 50100 "BCWebShopLoad"
     end;
 
     // Returns intern enum according to string value.
-    local procedure GetIntern(ItemJsonObject: JsonObject): Enum BCIntern
+    local procedure GetIntern(ItemJsonObject: JsonObject): Enum "UC Intern"
     var
         Intern: Text;
     begin
@@ -84,26 +84,26 @@ codeunit 50100 "BCWebShopLoad"
 
         case Intern of
             'KC':
-                exit(ENUM::BCIntern::KC);
+                exit(Enum::"UC Intern"::KC);
             'MM':
-                exit(ENUM::BCIntern::MM);
+                exit(Enum::"UC Intern"::MM);
             'IA':
-                exit(ENUM::BCIntern::IA);
+                exit(Enum::"UC Intern"::IA);
             'LJ':
-                exit(ENUM::BCIntern::LJ);
+                exit(Enum::"UC Intern"::LJ);
             'UC':
-                exit(ENUM::BCIntern::UC);
+                exit(Enum::"UC Intern"::UC);
             'PA':
-                exit(ENUM::BCIntern::PA);
+                exit(Enum::"UC Intern"::PA);
             'YS':
-                exit(ENUM::BCIntern::YS);
+                exit(Enum::"UC Intern"::YS);
             else
-                exit(ENUM::BCIntern::" ");
+                exit(Enum::"UC Intern"::" ");
         end;
     end;
 
     // Loads image to provided record from json that holds data of image.
-    local procedure loadImage(var BCItemUC: Record "BCItem UC"; var ItemJsonObject: JsonObject)
+    local procedure loadImage(var BCItemUC: Record "UC Web Shop Item"; var ItemJsonObject: JsonObject)
     var
         Base64Convert: Codeunit "Base64 Convert";
         tempBlob: Codeunit "Temp Blob";
@@ -129,7 +129,7 @@ codeunit 50100 "BCWebShopLoad"
 
     // Global vars
     var
-        BCJSONUtility: Codeunit BCJSONUtility;
+        BCJSONUtility: Codeunit "UC JSON Utility";
         UserPwdTok: Label '%1:%2', Comment = '%1 is username, %2 is password.';
         HeaderDataTok: Label 'Basic %1', Comment = '%1 represents Base64 encoded WebService login in a specific format.';
         WebErrorErr: Label 'Error occurred.\Status code: %1', Comment = '%1 is http status code.';

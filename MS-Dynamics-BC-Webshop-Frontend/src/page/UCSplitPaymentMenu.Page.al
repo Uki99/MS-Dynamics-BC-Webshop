@@ -1,15 +1,16 @@
 /// <summary>
-/// Page BCSplitPaymentMenu (ID 50105).
+/// Page UC Split Payment Menu (ID 64906).
 /// </summary>
-page 50105 "BCSplitPaymentMenu"
+page 64906 "UC Split Payment Menu"
 {
     Caption = 'Split Payment Menu';
-    SourceTable = BCSplitPayment;
+    SourceTable = "UC Split Payment";
     PageType = Card;
     ApplicationArea = All;
     UsageCategory = Documents;
     InsertAllowed = false;
     DeleteAllowed = false;
+
     layout
     {
         area(Content)
@@ -18,7 +19,7 @@ page 50105 "BCSplitPaymentMenu"
             {
                 Caption = 'Payment Amount';
 
-                field(PaymentAmountCard; Rec.PaymentAmountCard)
+                field("Payment Amount Card"; Rec."Payment Amount Card")
                 {
                     ApplicationArea = All;
                     Caption = 'Payment Amount Card';
@@ -26,15 +27,10 @@ page 50105 "BCSplitPaymentMenu"
 
                     trigger OnValidate()
                     begin
-                        if ((TotalAmount - Rec.PaymentAmountCash) <> Rec.PaymentAmountCard) AND (Rec.PaymentAmountCard < TotalAmount) then
-                            Rec.PaymentAmountCash := TotalAmount - Rec.PaymentAmountCard
-                        else begin
-                            Rec.PaymentAmountCard := TotalAmount;
-                            Rec.PaymentAmountCash := 0;
-                        end;
+                        ValidateAmountCard();
                     end;
                 }
-                field(PaymentAmountCash; Rec.PaymentAmountCash)
+                field(PaymentAmountCash; Rec."Payment Amount Cash")
                 {
                     ApplicationArea = All;
                     Caption = 'Payment Amount Cash';
@@ -42,12 +38,7 @@ page 50105 "BCSplitPaymentMenu"
 
                     trigger OnValidate()
                     begin
-                        if ((TotalAmount - Rec.PaymentAmountCard) <> Rec.PaymentAmountCash) AND (Rec.PaymentAmountCash < TotalAmount) then
-                            Rec.PaymentAmountCard := TotalAmount - Rec.PaymentAmountCash
-                        else begin
-                            Rec.PaymentAmountCash := TotalAmount;
-                            Rec.PaymentAmountCard := 0;
-                        end;
+                        ValidateAmountCash();
                     end;
                 }
             }
@@ -68,16 +59,36 @@ page 50105 "BCSplitPaymentMenu"
 
     trigger OnOpenPage()
     var
-        BCCartEntry: Record "BCCart Entry";
-        BCCurrentUser: Codeunit BCCurrentUser;
+        UCCartEntry: Record "UC Cart Entry";
+        UCCurrentUser: Codeunit "UC Current User";
     begin
         if not Rec.Get() then begin
             Rec.Init();
             Rec.Insert();
         end;
 
-        BCCartEntry.SetRange(Username, BCCurrentUser.GetUser());
-        TotalAmount := BCCartEntry.CalcTotalAmount();
+        UCCartEntry.SetRange(Username, UCCurrentUser.GetUser());
+        TotalAmount := UCCartEntry.CalcTotalAmount();
+    end;
+
+    local procedure ValidateAmountCard()
+    begin
+        if ((TotalAmount - Rec."Payment Amount Cash") <> Rec."Payment Amount Card") and (Rec."Payment Amount Card" < TotalAmount) then
+            Rec."Payment Amount Cash" := TotalAmount - Rec."Payment Amount Card"
+        else begin
+            Rec."Payment Amount Card" := TotalAmount;
+            Rec."Payment Amount Cash" := 0;
+        end;
+    end;
+
+    local procedure ValidateAmountCash()
+    begin
+        if ((TotalAmount - Rec."Payment Amount Card") <> Rec."Payment Amount Cash") AND (Rec."Payment Amount Cash" < TotalAmount) then
+            Rec."Payment Amount Card" := TotalAmount - Rec."Payment Amount Cash"
+        else begin
+            Rec."Payment Amount Cash" := TotalAmount;
+            Rec."Payment Amount Card" := 0;
+        end;
     end;
 
     var

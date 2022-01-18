@@ -1,7 +1,7 @@
 /// <summary>
-/// Codeunit BCWebServiceOData (ID 50102).
+/// Codeunit UC Web Service OData (ID 64904).
 /// </summary>
-codeunit 50102 "BCWebServiceOData"
+codeunit 64904 "UC Web Service OData"
 {
     /// <summary>
     /// CallODataService.
@@ -11,7 +11,7 @@ codeunit 50102 "BCWebServiceOData"
     /// <returns>Return value of type JsonObject.</returns>
     procedure CallODataService(OperationName: Text; BodyContent: Text): JsonObject;
     var
-        BCWebShopSetup: Record "BCWeb Shop Setup";
+        UCWebShopSetup: Record "UC Web Shop Setup";
         HttpClient: HttpClient;
         HttpHeaders: HttpHeaders;
         HttpContent: HttpContent;
@@ -19,10 +19,10 @@ codeunit 50102 "BCWebServiceOData"
         ResponseJsonToken: JsonToken;
         ResponseText: Text;
     begin
-        if not BCWebShopSetup.Get() then
+        if not UCWebShopSetup.Get() then
             Error('Failed to read Web Shop setup.\Please, setup the Web Shop setup page first.');
 
-        SetRequestHeader(HttpClient, BCWebShopSetup);
+        SetRequestHeader(HttpClient, UCWebShopSetup);
 
         HttpContent.WriteFrom(BodyContent);
 
@@ -49,7 +49,7 @@ codeunit 50102 "BCWebServiceOData"
     /// </summary>
     /// <param name="httpClient">VAR httpClient.</param>
     /// <param name="BCWebShopSetup">VAR Record "BCWeb Shop Setup".</param>
-    procedure SetRequestHeader(var httpClient: httpClient; var BCWebShopSetup: Record "BCWeb Shop Setup")
+    procedure SetRequestHeader(var httpClient: httpClient; var BCWebShopSetup: Record "UC Web Shop Setup")
     var
         Base64Convert: Codeunit "Base64 Convert";
         AuthString: Text;

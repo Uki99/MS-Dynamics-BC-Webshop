@@ -1,12 +1,12 @@
 /// <summary>
-/// Page BCWeb Shop (ID 50101).
+/// Page UC Web Shop (ID 64902).
 /// </summary>
-page 50101 "BCWeb Shop"
+page 64902 "UC Web Shop"
 {
     ApplicationArea = All;
     PageType = List;
     UsageCategory = Lists;
-    SourceTable = "BCItem UC";
+    SourceTable = "UC Web Shop Item";
     Caption = 'Web Shop';
     Editable = false;
 
@@ -56,7 +56,7 @@ page 50101 "BCWeb Shop"
         }
         area(Factboxes)
         {
-            part(Cart; "BCCart Subform")
+            part(Cart; "UC Cart Subform")
             {
                 ApplicationArea = All;
                 Caption = 'Cart';
@@ -69,8 +69,8 @@ page 50101 "BCWeb Shop"
         {
             action("Add To Cart")
             {
-                ApplicationArea = All;
                 Caption = 'Add To Cart';
+                ApplicationArea = All;
                 ToolTip = 'Adds the selected item to cart.';
                 Image = Apply;
                 Promoted = true;
@@ -79,57 +79,34 @@ page 50101 "BCWeb Shop"
                 ShortcutKey = 'Return';
 
                 trigger OnAction()
-                var
-                    CartEntry: Record "BCCart Entry";
-                    BCCurrentUser: Codeunit BCCurrentUser;
                 begin
-                    CartEntry.SetRange(Username, BCCurrentUser.GetUser());
-                    CartEntry.SetRange("Item No.", Rec."No.");
-
-                    if CartEntry.IsEmpty() then begin
-                        CartEntry.Init();
-                        CartEntry."Entry No." := 0;
-                        CartEntry.Validate("Item No.", Rec."No.");
-                        CartEntry.Validate(Quantity, 1);
-                        CartEntry.Insert(true);
-                    end
-                    else begin
-                        CartEntry.FindFirst();
-                        CartEntry.Validate(Quantity, CartEntry.Quantity + 1);
-                        CartEntry.Modify(true);
-                    end;
+                    AddItemToCart();
                 end;
             }
             action(Checkout)
             {
+                Caption = 'Checkout';
                 ApplicationArea = All;
                 ToolTip = 'Proceed to checkout';
-                Caption = 'Checkout';
                 Image = ExpandAll;
                 Promoted = true;
                 PromotedOnly = true;
                 PromotedCategory = Process;
-                RunObject = Page BCCheckout;
+                RunObject = Page "UC Checkout";
             }
             action(ClearCart)
             {
+                Caption = 'Clear Cart';
                 ApplicationArea = All;
                 ToolTip = 'Deletes all content from this cart.';
-                Caption = 'Clear Cart';
                 Image = CreateMovement;
                 Promoted = true;
                 PromotedOnly = true;
                 PromotedCategory = Process;
 
                 trigger OnAction()
-                var
-                    BCCartEntry: Record "BCCart Entry";
-                    BCCurrentUser: Codeunit BCCurrentUser;
                 begin
-                    if Dialog.Confirm('Do you want to clear the cart?', false) then begin
-                        BCCartEntry.SetRange(Username, BCCurrentUser.GetUser());
-                        BCCartEntry.DeleteAll(true);
-                    end;
+                    ClearUserCart();
                 end;
             }
         }
@@ -137,21 +114,55 @@ page 50101 "BCWeb Shop"
 
     trigger OnOpenPage()
     var
-        BCWebShopLoad: Codeunit BCWebShopLoad;
-        BCCurrentUser: Codeunit BCCurrentUser;
+        UCWebShopLoad: Codeunit "UC Web Shop Load";
+        UCCurrentUser: Codeunit "UC Current User";
     begin
         // Delete everything from the table and use codeunit to send GET request to backend to retrieve product data.
-        if BCCurrentUser.GetUser() = '' then begin
+
+        if UCCurrentUser.GetUser() = '' then begin
             Message('You''re not logged in. Please login to proceed.');
 
-            if (Page.RunModal(Page::BCLoginPage) = Action::LookupOK) OR (Page.RunModal(Page::BCLoginPage) = Action::LookupCancel) then begin
+            if (Page.RunModal(Page::"UC Login Page") = Action::LookupOK) OR (Page.RunModal(Page::"UC Login Page") = Action::LookupCancel) then begin
                 Rec.DeleteAll(true);
-                BCWebShopLoad.Run();
+                UCWebShopLoad.Run();
             end
         end
         else begin
             Rec.DeleteAll(true);
-            BCWebShopLoad.Run();
+            UCWebShopLoad.Run();
+        end;
+    end;
+
+    local procedure AddItemToCart()
+    var
+        UCCartEntry: Record "UC Cart Entry";
+        UCCurrentUser: Codeunit "UC Current User";
+    begin
+        UCCartEntry.SetRange(Username, UCCurrentUser.GetUser());
+        UCCartEntry.SetRange("Item No.", Rec."No.");
+
+        if UCCartEntry.IsEmpty() then begin
+            UCCartEntry.Init();
+            UCCartEntry."Entry No." := 0;
+            UCCartEntry.Validate("Item No.", Rec."No.");
+            UCCartEntry.Validate(Quantity, 1);
+            UCCartEntry.Insert(true);
+        end
+        else begin
+            UCCartEntry.FindFirst();
+            UCCartEntry.Validate(Quantity, UCCartEntry.Quantity + 1);
+            UCCartEntry.Modify(true);
+        end;
+    end;
+
+    local procedure ClearUserCart()
+    var
+        UCCartEntry: Record "UC Cart Entry";
+        UCCurrentUser: Codeunit "UC Current User";
+    begin
+        if Dialog.Confirm('Do you want to clear the cart?', false) then begin
+            UCCartEntry.SetRange(Username, UCCurrentUser.GetUser());
+            UCCartEntry.DeleteAll(true);
         end;
     end;
 }

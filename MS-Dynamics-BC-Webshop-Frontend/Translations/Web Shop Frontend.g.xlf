@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Web Shop Frontend">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 1053811674 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cart Entry</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Cart Entry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1053811674 - Field 636392376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Cart Entry - Field Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1053811674 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Cart Entry - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1053811674 - Field 3683672590 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Cart Entry - Field Item Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1053811674 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Cart Entry - Field Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1053811674 - Field 2704404533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Cart Entry - Field Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1053811674 - Field 2937233469 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Cart Entry - Field Unit Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1053811674 - Field 2994142618 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Username</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Cart Entry - Field Username - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 199121178 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Split Payment</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Split Payment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 199121178 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Split Payment - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 199121178 - Field 3148758662 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Amount Card</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Split Payment - Field Payment Amount Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 199121178 - Field 2196590297 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Amount Cash</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Split Payment - Field Payment Amount Cash - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1825012587 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Web Shop Cue</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Web Shop Cue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1825012587 - Field 3037551876 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>All Items</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Web Shop Cue - Field No. of Items - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1825012587 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Web Shop Cue - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2527654393 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Items UC</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Web Shop Item - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2527654393 - Field 4215614726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Intern</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Web Shop Item - Field Intern - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2527654393 - Field 2105307182 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inventory</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Web Shop Item - Field Inventory - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2527654393 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Web Shop Item - Field Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2527654393 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Web Shop Item - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2527654393 - Field 1594621544 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Picture</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Web Shop Item - Field Picture - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2527654393 - Field 3880268703 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specification</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Web Shop Item - Field Specification - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2527654393 - Field 2937233469 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Web Shop Item - Field Unit Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2559809375 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Web Shop Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Web Shop Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2559809375 - Field 935359557 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Backend Password</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Web Shop Setup - Field Backend Password - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2559809375 - Field 3670913374 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Backend Username</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Web Shop Setup - Field Backend Username - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2559809375 - Field 3011504902 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Backend Web Service URL</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Web Shop Setup - Field Backend Web Service URL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2559809375 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UC Web Shop Setup - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3167631474 - NamedType 853463113" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Basic %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 represents Base64 encoded WebService login in a specific format.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UC Posting Handler - NamedType HeaderDataTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3167631474 - NamedType 1410785646" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1:%2</source>
+          <note from="Developer" annotates="general" priority="2">%1 is username, %2 is password.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UC Posting Handler - NamedType UserPwdTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3167631474 - NamedType 2335577749" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error on server side. Error Code is: %1, Error Text is: %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Error code., %2 = Error text.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UC Posting Handler - NamedType WebError2Msg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3167631474 - NamedType 183338155" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Something went wrong. Error Code is: %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Error code.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UC Posting Handler - NamedType WebErrorMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 541389200 - NamedType 853463113" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Basic %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 represents Base64 encoded WebService login in a specific format.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UC Web Service OData - NamedType HeaderDataTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 541389200 - NamedType 1410785646" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1:%2</source>
+          <note from="Developer" annotates="general" priority="2">%1 is username, %2 is password.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UC Web Service OData - NamedType UserPwdTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 310863496 - NamedType 2812030733" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1/beTerna/webShop/v1.0/companies(3adc449e-8621-ec11-bb76-000d3a29933c)/itemsUC?$filter=intern eq 'UC'</source>
+          <note from="Developer" annotates="general" priority="2">%1 is API base URL.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UC Web Shop Load - NamedType BackEndWebShopUrlTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 310863496 - NamedType 853463113" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Basic %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 represents Base64 encoded WebService login in a specific format.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UC Web Shop Load - NamedType HeaderDataTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 310863496 - NamedType 1410785646" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1:%2</source>
+          <note from="Developer" annotates="general" priority="2">%1 is username, %2 is password.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UC Web Shop Load - NamedType UserPwdTok</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 310863496 - NamedType 4107475447" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error occurred.\Status code: %1</source>
+          <note from="Developer" annotates="general" priority="2">%1 is http status code.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UC Web Shop Load - NamedType WebErrorErr</note>
+        </trans-unit>
+        <trans-unit id="Page 1782157156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cart Subform</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Cart Subform - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1782157156 - Control 3683672590 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Item Name field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Cart Subform - Control Item Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1782157156 - Control 2704404533 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Quantity field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Cart Subform - Control Quantity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1782157156 - Control 2937233469 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Unit Price field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Cart Subform - Control Unit Price - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1782157156 - Control 245426702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Cart Subform - Control Total - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1782157156 - Control 3692706522 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Amount field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Cart Subform - Control Total Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1782157156 - Control 3692706522 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Cart Subform - Control Total Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1782157156 - Action 3424086012 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proceed to checkout</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Cart Subform - Action Checkout - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1782157156 - Action 3424086012 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Checkout</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Cart Subform - Action Checkout - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1782157156 - Action 391968999 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Deletes all content from this cart.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Cart Subform - Action ClearCart - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1782157156 - Action 391968999 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Clear Cart</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Cart Subform - Action ClearCart - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3083351418 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Checkout</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Checkout - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3083351418 - Method 4082732986 - NamedType 1651400144" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cash,Card,Split Payment</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Checkout - Method MakeTransaction - NamedType PaymentMethodsLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3083351418 - Control 636392376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Amount field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Checkout - Control Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3083351418 - Control 3683672590 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Item Name field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Checkout - Control Item Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3083351418 - Control 568743302 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Item No. field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Checkout - Control Item No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3083351418 - Control 2704404533 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Quantity field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Checkout - Control Quantity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3083351418 - Control 2937233469 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Unit Price field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Checkout - Control Unit Price - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3083351418 - Control 3694632347 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Checkout - Control TotalCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3083351418 - Control 3996842083 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Total Cost field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Checkout - Control Total Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3083351418 - Control 3996842083 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Checkout - Control Total Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3083351418 - Action 2677192826 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Buy everything from the cart.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Checkout - Action Buy - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3083351418 - Action 2677192826 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Buy</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Checkout - Action Buy - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3221144850 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Login</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Login Page - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3221144850 - Control 3123527090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credentials</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Login Page - Control Info - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3221144850 - Control 2575460289 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Username field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Login Page - Control Password - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3221144850 - Control 2575460289 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Username</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Login Page - Control Password - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3221144850 - Control 2994142618 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Username field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Login Page - Control Username - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3221144850 - Control 2994142618 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Username</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Login Page - Control Username - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3221144850 - Control 2061428202 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Notification</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Login Page - Control Notifications - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3221144850 - Control 342756159 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Notification field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Login Page - Control Notification - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3221144850 - Control 342756159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Notification</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Login Page - Control Notification - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3221144850 - Action 3544158917 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Executes the Login action.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Login Page - Action Login - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3221144850 - Action 3544158917 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Login</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Login Page - Action Login - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3221144850 - Action 4149417275 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Executes the Register action.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Login Page - Action Register - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3221144850 - Action 4149417275 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Register</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Login Page - Action Register - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 68200871 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Car Part Role Center</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC My Role Center - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 68200871 - Action 1263335620 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Executes the LoginPage action.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC My Role Center - Action LoginPage - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 68200871 - Action 1263335620 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Log in / Register</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC My Role Center - Action LoginPage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 68200871 - Action 1514883969 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Executes the Setup action.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC My Role Center - Action Setup - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 68200871 - Action 1514883969 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Web Shop Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC My Role Center - Action Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 68200871 - Action 1309201552 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Executes the WebShop action.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC My Role Center - Action WebShop - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 68200871 - Action 1309201552 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Web Shop</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC My Role Center - Action WebShop - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 53819004 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Retail Queue</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Retail Queue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 53819004 - Control 714498981 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of unique items</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Retail Queue - Control Transport - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 53819004 - Control 3037551876 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the No. of Items field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Retail Queue - Control No. of Items - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1688806143 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Split Payment Menu</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Split Payment Menu - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1688806143 - Control 1880071162 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Split Payment Menu - Control PaymentAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1688806143 - Control 3148758662 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Payment Amount Card field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Split Payment Menu - Control Payment Amount Card - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1688806143 - Control 3148758662 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Amount Card</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Split Payment Menu - Control Payment Amount Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1688806143 - Control 805789177 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Payment Amount Cash field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Split Payment Menu - Control PaymentAmountCash - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1688806143 - Control 805789177 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Amount Cash</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Split Payment Menu - Control PaymentAmountCash - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1688806143 - Control 245426702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Split Payment Menu - Control Total - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1688806143 - Control 588318770 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the PTotal Amount field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Split Payment Menu - Control TotalAmount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1688806143 - Control 588318770 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Split Payment Menu - Control TotalAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3770052830 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Web Shop</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3770052830 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3770052830 - Control 4215614726 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Intern field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop - Control Intern - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3770052830 - Control 2105307182 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Inventory field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop - Control Inventory - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3770052830 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Name field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3770052830 - Control 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the No. field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop - Control No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3770052830 - Control 1594621544 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Picture field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop - Control Picture - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3770052830 - Control 3880268703 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Specification field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop - Control Specification - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3770052830 - Control 2937233469 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Unit Price field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop - Control Unit Price - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3770052830 - Control 1443341560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cart</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop - Control Cart - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3770052830 - Action 4279134850 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adds the selected item to cart.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop - Action Add To Cart - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3770052830 - Action 4279134850 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add To Cart</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop - Action Add To Cart - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3770052830 - Action 3424086012 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proceed to checkout</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop - Action Checkout - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3770052830 - Action 3424086012 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Checkout</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop - Action Checkout - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3770052830 - Action 391968999 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Deletes all content from this cart.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop - Action ClearCart - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3770052830 - Action 391968999 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Clear Cart</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop - Action ClearCart - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1385699144 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WebShop Headline</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop Headline - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1385699144 - Control 3322762936 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Greeting headline 1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop Headline - Control GreetingText - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1385699144 - Control 3855400194 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Greeting headline 2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop Headline - Control GreetingText2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1385699144 - Control 3217703577 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Greeting headline 3</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop Headline - Control GreetingText3 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2559809375 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Web Shop Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2559809375 - Control 3338038323 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Backend Web Service</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop Setup - Control BackendWebService - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2559809375 - Control 3011504902 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Backend Web Service URL field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop Setup - Control Backend Web Service URL - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2559809375 - Control 2548466558 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credentials</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop Setup - Control BackendWebServiceLogin - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2559809375 - Control 935359557 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Backend Password field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop Setup - Control Backend Password - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2559809375 - Control 935359557 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Password</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop Setup - Control Backend Password - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2559809375 - Control 3670913374 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Backend Username field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop Setup - Control Backend Username - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2559809375 - Control 3670913374 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Username</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Web Shop Setup - Control Backend Username - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

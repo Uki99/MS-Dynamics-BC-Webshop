@@ -1,4 +1,7 @@
-table 50100 "BCWeb Shop Setup"
+/// <summary>
+/// Table UC Web Shop Setup (ID 64902).
+/// </summary>
+table 64902 "UC Web Shop Setup"
 {
     Caption = 'Web Shop Setup';
     DataClassification = CustomerContent;
@@ -14,6 +17,7 @@ table 50100 "BCWeb Shop Setup"
         {
             Caption = 'Backend Web Service URL';
             DataClassification = CustomerContent;
+            ExtendedDatatype = URL;
         }
         field(3; "Backend Username"; Text[100])
         {

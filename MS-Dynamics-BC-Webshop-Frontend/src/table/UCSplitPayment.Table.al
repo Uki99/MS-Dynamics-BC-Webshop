@@ -1,7 +1,7 @@
 /// <summary>
-/// Table BCSplitPayment (ID 50103).
+/// Table UC Split Payment (ID 64904).
 /// </summary>
-table 50103 "BCSplitPayment"
+table 64904 "UC Split Payment"
 {
     DataClassification = CustomerContent;
     Caption = 'Split Payment';
@@ -13,18 +13,17 @@ table 50103 "BCSplitPayment"
             DataClassification = SystemMetadata;
             Caption = 'No.';
         }
-        field(2; PaymentAmountCard; Decimal)
+        field(2; "Payment Amount Card"; Decimal)
         {
             DataClassification = SystemMetadata;
-            Caption = 'No.';
+            Caption = 'Payment Amount Card';
         }
-        field(3; PaymentAmountCash; Decimal)
+        field(3; "Payment Amount Cash"; Decimal)
         {
             DataClassification = SystemMetadata;
-            Caption = 'No.';
+            Caption = 'Payment Amount Cash';
         }
     }
-
     keys
     {
         key(PK; "No.")

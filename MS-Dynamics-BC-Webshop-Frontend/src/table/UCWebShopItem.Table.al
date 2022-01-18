@@ -1,11 +1,12 @@
 /// <summary>
-/// Table BCItem UC (ID 50101).
+/// Table UC Web Shop Item (ID 64901).
 /// </summary>
-table 50101 "BCItem UC"
+table 64901 "UC Web Shop Item"
 {
     DataClassification = CustomerContent;
     Caption = 'Items UC';
-    LookupPageId = "BCWeb Shop";
+    LookupPageId = "UC Web Shop";
+    DrillDownPageId = "UC Web Shop";
 
     fields
     {
@@ -29,7 +30,7 @@ table 50101 "BCItem UC"
             DataClassification = CustomerContent;
             Caption = 'Inventory';
         }
-        field(5; Intern; Enum BCIntern)
+        field(5; Intern; Enum "UC Intern")
         {
             DataClassification = CustomerContent;
             Caption = 'Intern';
@@ -54,6 +55,7 @@ table 50101 "BCItem UC"
     }
     fieldgroups
     {
+        fieldgroup(DropDown; Name, "Unit Price", Inventory) { }
         fieldgroup(Brick; Name, "Unit Price", Picture) { }
     }
 }

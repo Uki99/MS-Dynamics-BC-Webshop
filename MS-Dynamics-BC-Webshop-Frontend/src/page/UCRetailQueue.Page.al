@@ -1,12 +1,12 @@
 /// <summary>
-/// Page BCRetail Queue (ID 50105).
+/// Page UC Retail Queue (ID 64907).
 /// </summary>
-page 50108 "BCRetail Queue"
+page 64907 "UC Retail Queue"
 {
 
     Caption = 'Retail Queue';
     PageType = CardPart;
-    SourceTable = "BCWeb Shop Cue";
+    SourceTable = "UC Web Shop Cue";
 
     layout
     {
@@ -15,11 +15,12 @@ page 50108 "BCRetail Queue"
             cuegroup(Transport)
             {
                 Caption = 'No. of unique items';
+
                 field("No. of Items"; Rec."No. of Items")
                 {
                     ToolTip = 'Specifies the value of the No. of Items field.';
                     ApplicationArea = All;
-                    DrillDownPageID = "BCWeb Shop";
+                    DrillDownPageID = "UC Web Shop";
                 }
             }
         }

@@ -1,7 +1,7 @@
 /// <summary>
-/// Page BCMyRoleCenter (ID 50106).
+/// Page UC My Role Center (ID 64908).
 /// </summary>
-page 50106 "BCMyRoleCenter"
+page 64908 "UC My Role Center"
 {
     PageType = RoleCenter;
     Caption = 'Car Part Role Center';
@@ -10,11 +10,11 @@ page 50106 "BCMyRoleCenter"
     {
         area(RoleCenter)
         {
-            part(Headline; "BCWebShop Headline")
+            part(Headline; "UC Web Shop Headline")
             {
                 ApplicationArea = All;
             }
-            part(Info; "BCRetail Queue")
+            part(Info; "UC Retail Queue")
             {
                 ApplicationArea = All;
             }
@@ -29,21 +29,21 @@ page 50106 "BCMyRoleCenter"
             {
                 ApplicationArea = All;
                 Caption = 'Log in / Register';
-                RunObject = Page BCLoginPage;
+                RunObject = Page "UC Login Page";
                 ToolTip = 'Executes the LoginPage action.';
             }
             action(Setup)
             {
                 ApplicationArea = All;
                 Caption = 'Web Shop Setup';
-                RunObject = Page "BCWeb Shop Setup";
+                RunObject = Page "UC Web Shop Setup";
                 ToolTip = 'Executes the Setup action.';
             }
             action(WebShop)
             {
                 ApplicationArea = All;
                 Caption = 'Web Shop';
-                RunObject = Page "BCWeb Shop";
+                RunObject = Page "UC Web Shop";
                 ToolTip = 'Executes the WebShop action.';
             }
         }

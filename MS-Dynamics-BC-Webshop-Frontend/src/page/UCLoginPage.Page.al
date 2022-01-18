@@ -1,7 +1,7 @@
 /// <summary>
-/// Page BCLoginPage (ID 50104).
+/// Page UC Login Page (ID 64901).
 /// </summary>
-page 50104 "BCLoginPage"
+page 64901 "UC Login Page"
 {
     PageType = Card;
     ApplicationArea = All;
@@ -60,10 +60,7 @@ page 50104 "BCLoginPage"
 
                 trigger OnAction()
                 begin
-                    BCCurrentUser.ValidateLogin(Password, Username);
-                    Message('Successfully logged in as: ' + BCCurrentUser.GetUser());
-                    CurrPage.Close();
-                    Page.Run(Page::BCLoginPage);
+                    TryLogin();
                 end;
             }
             action(Register)
@@ -77,28 +74,8 @@ page 50104 "BCLoginPage"
                 ToolTip = 'Executes the Register action.';
 
                 trigger OnAction()
-                var
-                    BCWebShopSetup: Record "BCWeb Shop Setup";
-                    BCJSONUtility: Codeunit BCJSONUtility;
-                    BCWebService: Codeunit BCWebServiceOData;
-                    CustomerJSON: Text;
-                    ReturnJSONCustomer: JsonObject;
                 begin
-                    if not BCWebShopSetup.Get() then
-                        Error('Failed to read Web Shop setup.\Please, setup the Web Shop setup page first.');
-
-                    BCCurrentUser.SetUser(Username);
-                    BCCurrentUser.Register(Password);
-                    Message('Successfully registered as user: ' + BCCurrentUser.GetUser());
-                    CurrPage.Close();
-                    Page.Run(Page::BCLoginPage);
-
-                    // Creating new customer for this username on backend
-                    CustomerJSON := BCJSONUtility.CreateCustomerJSON(BCCurrentUser.GetUser());
-                    ReturnJSONCustomer := BCWebService.CallODataService('customers', CustomerJSON);
-
-                    // Sets currently logged in user's Customer No. from backend so it can be refferenced from frontend when crafting transaction body
-                    BCCurrentUser.SetUserCustomerNo(BCJSONUtility.GetFieldValue(ReturnJSONCustomer, 'number').AsText());
+                    RegisterNewUser();
                 end;
             }
         }
@@ -106,26 +83,56 @@ page 50104 "BCLoginPage"
 
     trigger OnOpenPage()
     begin
-        if BCCurrentUser.GetUser() = '' then
+        if UCCurrentUser.GetUser() = '' then
             Notification := 'You are currently not logged in. Register or log in.'
         else
-            Notification := 'You are currently logged in as: ' + BCCurrentUser.GetUser();
+            Notification := 'You are currently logged in as: ' + UCCurrentUser.GetUser();
     end;
 
     trigger OnQueryClosePage(CloseAction: Action): Boolean
     begin
         if CloseAction = Action::LookupOK then begin
-            BCCurrentUser.ValidateLogin(Password, Username);
-
-            if Username <> '' then
-                Message('Successfully logged in as: ' + BCCurrentUser.GetUser());
-
-            exit(BCCurrentUser.GetUser() <> '');
+            UCCurrentUser.ValidateLogin(Password, Username);
+            Message('Successfully logged in as: ' + UCCurrentUser.GetUser());
+            Exit(UCCurrentUser.GetUser() <> '');
         end;
     end;
 
+    local procedure TryLogin()
+    begin
+        UCCurrentUser.ValidateLogin(Password, Username);
+        Message('Successfully logged in as: ' + UCCurrentUser.GetUser());
+        CurrPage.Close();
+        Page.Run(Page::"UC Login Page");
+    end;
+
+    local procedure RegisterNewUser()
     var
-        BCCurrentUser: codeunit BCCurrentUser;
+        UCWebShopSetup: Record "UC Web Shop Setup";
+        UCJSONUtility: Codeunit "UC JSON Utility";
+        UCWebServiceOData: Codeunit "UC Web Service OData";
+        CustomerJSON: Text;
+        ReturnJSONCustomer: JsonObject;
+    begin
+        if not UCWebShopSetup.Get() then
+            Error('Failed to read Web Shop setup.\Please, setup the Web Shop setup page first.');
+
+        UCCurrentUser.SetUser(Username);
+        UCCurrentUser.Register(Password);
+        Message('Successfully registered as user: ' + UCCurrentUser.GetUser());
+        CurrPage.Close();
+        Page.Run(Page::"UC Login Page");
+
+        // Creating new customer for this username on backend
+        CustomerJSON := UCJSONUtility.CreateCustomerJSON(UCCurrentUser.GetUser());
+        ReturnJSONCustomer := UCWebServiceOData.CallODataService('customers', CustomerJSON);
+
+        // Sets currently logged in user's Customer No. from backend so it can be refferenced from frontend when crafting transaction body
+        UCCurrentUser.SetUserCustomerNo(UCJSONUtility.GetFieldValue(ReturnJSONCustomer, 'number').AsText());
+    end;
+
+    var
+        UCCurrentUser: Codeunit "UC Current User";
         Username: Text[100];
         Password: Text[250];
         Notification: Text;

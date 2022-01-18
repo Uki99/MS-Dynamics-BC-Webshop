@@ -1,7 +1,4 @@
-/// <summary>
-/// Table Retail Cue (ID 50102).
-/// </summary>
-table 50104 "BCWeb Shop Cue"
+table 64903 "UC Web Shop Cue"
 {
     Caption = 'Web Shop Cue';
     DataClassification = CustomerContent;
@@ -17,7 +14,7 @@ table 50104 "BCWeb Shop Cue"
         {
             Caption = 'All Items';
             FieldClass = FlowField;
-            CalcFormula = count("BCItem UC");
+            CalcFormula = count("UC Web Shop Item");
         }
     }
     keys

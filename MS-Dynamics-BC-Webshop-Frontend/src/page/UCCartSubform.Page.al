@@ -1,11 +1,11 @@
 /// <summary>
-/// Page BCCart Subform (ID 50102).
+/// Page UC Cart Subform (ID 64904).
 /// </summary>
-page 50102 "BCCart Subform"
+page 64904 "UC Cart Subform"
 {
     Caption = 'Cart Subform';
     PageType = ListPart;
-    SourceTable = "BCCart Entry";
+    SourceTable = "UC Cart Entry";
     ModifyAllowed = false;
     InsertAllowed = false;
 
@@ -17,18 +17,18 @@ page 50102 "BCCart Subform"
             {
                 field("Item Name"; Rec."Item Name")
                 {
-                    ToolTip = 'Specifies the value of the Item Name field.';
                     ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the Item Name field.';
                 }
                 field("Unit Price"; Rec."Unit Price")
                 {
-                    ToolTip = 'Specifies the value of the Unit Price field.';
                     ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the Unit Price field.';
                 }
                 field(Quantity; Rec.Quantity)
                 {
-                    ToolTip = 'Specifies the value of the Quantity field.';
                     ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the Quantity field.';
                     Editable = true;
                 }
             }
@@ -38,9 +38,9 @@ page 50102 "BCCart Subform"
 
                 field("Total Amount"; Rec.CalcTotalAmount())
                 {
-                    ToolTip = 'Specifies the value of the Amount field';
                     ApplicationArea = All;
                     Caption = 'Amount';
+                    ToolTip = 'Specifies the value of the Amount field';
                 }
             }
         }
@@ -52,19 +52,19 @@ page 50102 "BCCart Subform"
             action(Checkout)
             {
                 ApplicationArea = All;
-                ToolTip = 'Proceed to checkout';
                 Caption = 'Checkout';
+                ToolTip = 'Proceed to checkout';
                 Image = ExpandAll;
                 Promoted = true;
                 PromotedOnly = true;
                 PromotedCategory = Process;
-                RunObject = Page BCCheckout;
+                RunObject = Page "UC Checkout";
             }
             action(ClearCart)
             {
                 ApplicationArea = All;
-                ToolTip = 'Deletes all content from this cart.';
                 Caption = 'Clear Cart';
+                ToolTip = 'Deletes all content from this cart.';
                 Image = CreateMovement;
                 Promoted = true;
                 PromotedOnly = true;
@@ -72,10 +72,7 @@ page 50102 "BCCart Subform"
 
                 trigger OnAction()
                 begin
-                    if Dialog.Confirm('Do you want to clear the cart?', false) then begin
-                        Rec.SetRange(Username, BCCurrentUser.GetUser());
-                        Rec.DeleteAll(true);
-                    end;
+                    ClearUserCart();
                 end;
             }
         }
@@ -83,9 +80,17 @@ page 50102 "BCCart Subform"
 
     trigger OnOpenPage()
     begin
-        Rec.SetRange(Username, BCCurrentUser.GetUser());
+        Rec.SetRange(Username, UCCurrentUser.GetUser());
+    end;
+
+    local procedure ClearUserCart()
+    begin
+        if Dialog.Confirm('Do you want to clear the cart?', false) then begin
+            Rec.SetRange(Username, UCCurrentUser.GetUser());
+            Rec.DeleteAll(true);
+        end;
     end;
 
     var
-        BCCurrentUser: codeunit BCCurrentUser;
+        UCCurrentUser: Codeunit "UC Current User";
 }

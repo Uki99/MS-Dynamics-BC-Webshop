@@ -1,25 +1,27 @@
 {
   "id": "907913c2-98a2-416f-99bc-663969d2780c",
-  "name": "WebShopFrontendUC",
-  "publisher": "Ugljesa Ciric",
+  "name": "Web Shop Frontend",
+  "publisher": "Uglješa Ćirić",
   "version": "18.0.0.2021102601",
-  "brief": "WebShop frontend utility",
-  "description": "This extension provides web shop functionality for project at Beterna.",
-  "privacyStatement": "",
-  "EULA": "",
-  "help": "",
-  "url": "",
-  "logo": "",
+  "brief": "Uglješa's Web Shop Frontend utility",
+  "description": "This extension provides web shop functionality for Business Central",
+  "privacyStatement": "https://github.com/Uki99/MS-Dynamics-BC-Webshop",
+  "EULA": "https://github.com/Uki99/MS-Dynamics-BC-Webshop",
+  "help": "https://github.com/Uki99/MS-Dynamics-BC-Webshop",
+  "url": "https://github.com/Uki99/MS-Dynamics-BC-Webshop",
+  "logo": "./logo/BET.216x216.png",
   "dependencies": [],
   "screenshots": [],
   "platform": "1.0.0.0",
   "application": "18.0.0.0",
   "idRanges": [
     {
-      "from": 50100,
-      "to": 50149
+      "from": 64900,
+      "to": 64949
     }
   ],
-  "showMyCode": true,
-  "runtime": "7.0"
+  "features": ["TranslationFile"],
+  "contextSensitiveHelpUrl": "https://github.com/Uki99/MS-Dynamics-BC-Webshop",
+  "resourceExposurePolicy": { "allowDebugging": true, "allowDownloadingSource": false, "includeSourceInSymbolFile": true },
+  "runtime": "8.0"
 }

@@ -1,18 +1,21 @@
 {
-    "CRS.ExtensionObjectNamePattern": "",
-    "CRS.FileNamePattern": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
-    "CRS.FileNamePatternExtensions": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
-    "CRS.FileNamePatternPageCustomizations": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
-    "CRS.ObjectNamePrefix": "BC",
-    "CRS.ObjectNameSuffix": "",
-    "CRS.RemovePrefixFromFilename": false,
-    "CRS.RenameWithGit": false,
-    "CRS.OnSaveAlFileAction": "Reorganize",
-    "al.codeAnalyzers": [
-      "${PerTenantExtensionCop}",
+  "al.enableCodeAnalysis": true,
+  "al.codeAnalyzers": [
       "${CodeCop}",
-      "${UICop}"
-    ],
-    "al.enableCodeActions": true,
-    "al.enableCodeAnalysis": true
+      "${UICop}",
+      "${AppSourceCop}"
+  ],
+  "al.assemblyProbingPaths": [
+      "./.netpackages",
+      "c:/Windows/assembly/"
+  ], 
+  "al.ruleSetPath": "ruleset.json",
+  "CRS.ObjectNamePrefix": "UC ",
+  "CRS.RemoveUnderscoreFromFilename": true,
+  "CRS.RemovePrefixFromFilename": false,
+  "CRS.FileNamePattern": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+  "CRS.FileNamePatternExtensions": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+  "CRS.OnSaveAlFileAction": "Reorganize",
+  "CRS.RenameWithGit": false,
+  "CRS.AlSubFolderName": "src"
 }

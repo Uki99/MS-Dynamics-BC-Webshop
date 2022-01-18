@@ -1,7 +1,7 @@
 /// <summary>
-/// Table BCCart Entry (ID 50102).
+/// Table UC Cart Entry (ID 64900).
 /// </summary>
-table 50102 "BCCart Entry"
+table 64900 "UC Cart Entry"
 {
     Caption = 'Cart Entry';
     DataClassification = CustomerContent;
@@ -13,6 +13,7 @@ table 50102 "BCCart Entry"
             Caption = 'Entry No.';
             DataClassification = SystemMetadata;
             AutoIncrement = true;
+            Editable = false;
         }
         field(2; "Item No."; Code[20])
         {
@@ -20,14 +21,8 @@ table 50102 "BCCart Entry"
             DataClassification = CustomerContent;
 
             trigger OnValidate()
-            var
-                "BCItem UC": Record "BCItem UC";
             begin
-                if "Item No." <> '' then begin
-                    "BCItem UC".Get("Item No.");
-                    Rec.Validate("Item Name", "BCItem UC".Name);
-                    Rec.Validate("Unit Price", "BCItem UC"."Unit Price");
-                end;
+                ValidateNamePrice();
             end;
         }
         field(3; "Item Name"; Text[100])
@@ -37,7 +32,7 @@ table 50102 "BCCart Entry"
 
             trigger OnValidate()
             begin
-                Rec.Validate(Rec."Amount");
+                Rec.Validate(Amount);
             end;
         }
         field(4; "Unit Price"; Integer)
@@ -47,7 +42,7 @@ table 50102 "BCCart Entry"
 
             trigger OnValidate()
             begin
-                Rec.Validate(Rec."Amount");
+                Rec.Validate(Amount);
             end;
         }
         field(5; Quantity; Integer)
@@ -57,7 +52,7 @@ table 50102 "BCCart Entry"
 
             trigger OnValidate()
             begin
-                Rec.Validate(Rec."Amount");
+                Rec.Validate(Amount);
             end;
         }
         field(6; Amount; Decimal)
@@ -84,23 +79,34 @@ table 50102 "BCCart Entry"
         }
     }
 
+    trigger OnInsert()
+    var
+        UCCurrentUser: Codeunit "UC Current User";
+    begin
+        Rec.Username := UCCurrentUser.GetUser();
+    end;
+
+    local procedure ValidateNamePrice()
+    var
+        UCWebShopItem: Record "UC Web Shop Item";
+    begin
+        if Rec."Item No." <> '' then begin
+            UCWebShopItem.Get(Rec."Item No.");
+            Rec.Validate("Item Name", UCWebShopItem.Name);
+            Rec.Validate("Unit Price", UCWebShopItem."Unit Price");
+        end;
+    end;
+
     /// <summary>
     /// CalcTotalAmount.
     /// </summary>
     /// <returns>Return value of type Decimal.</returns>
     procedure CalcTotalAmount(): Decimal;
     var
-        BCCurrentUser: Codeunit "BCCurrentUser";
+        UCCurrentUser: Codeunit "UC Current User";
     begin
-        Rec.SetRange(Username, BCCurrentUser.GetUser());
+        Rec.SetRange(Username, UCCurrentUser.GetUser());
         Rec.CalcSums(Amount);
         exit(Rec.Amount);
-    end;
-
-    trigger OnInsert()
-    var
-        BCCurrentUser: Codeunit BCCurrentUser;
-    begin
-        Rec.Username := BCCurrentUser.GetUser();
     end;
 }

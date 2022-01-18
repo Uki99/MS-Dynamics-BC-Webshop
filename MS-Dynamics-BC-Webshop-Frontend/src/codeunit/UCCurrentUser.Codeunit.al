@@ -1,14 +1,14 @@
 /// <summary>
-/// Codeunit BCCurrentUser (ID 50102).
+/// Codeunit UC Current User (ID 64900).
 /// </summary>
-codeunit 50101 "BCCurrentUser"
+codeunit 64900 "UC Current User"
 {
     SingleInstance = true;
 
     /// <summary>
     /// GetUser.
     /// </summary>
-    /// <returns>Return value of type Text[250].</returns>
+    /// <returns>Return value of type Text[100].</returns>
     procedure GetUser(): Text[100]
     begin
         exit(Username);
@@ -17,7 +17,7 @@ codeunit 50101 "BCCurrentUser"
     /// <summary>
     /// SetUser.
     /// </summary>
-    /// <param name="Name">Text[250].</param>
+    /// <param name="Name">Text[100].</param>
     procedure SetUser(Name: Text[100])
     begin
         Username := Name;
@@ -26,7 +26,7 @@ codeunit 50101 "BCCurrentUser"
     /// <summary>
     /// Register.
     /// </summary>
-    /// <param name="Password">Text[250].</param>
+    /// <param name="Password">Text[100].</param>
     procedure Register(Password: Text[250])
     begin
         if not IsolatedStorage.Contains(Username) then
@@ -36,21 +36,21 @@ codeunit 50101 "BCCurrentUser"
     end;
 
     /// <summary>
-    /// ValidatePassword.
+    /// ValidateLogin.
     /// </summary>
     /// <param name="Password">Text[250].</param>
-    /// <param name="NewUsername">Text[100].</param>
-    procedure ValidateLogin(Password: Text[250]; NewUsername: Text[100])
+    /// <param name="Username">Text[100].</param>
+    procedure ValidateLogin(Password: Text[250]; Username: Text[100])
     var
         PasswordFromStorage: Text;
     begin
-        if not IsolatedStorage.Get(NewUsername, PasswordFromStorage) then
+        if not IsolatedStorage.Get(Username, PasswordFromStorage) then
             Error('Username does not exist!');
 
         if PasswordFromStorage <> Password then
             Error('Wrong password!');
 
-        SetUser(NewUsername);
+        SetUser(Username);
     end;
 
     /// <summary>
@@ -69,7 +69,9 @@ codeunit 50101 "BCCurrentUser"
     procedure GetUserCustomerNo() UserNo: Text
     begin
         if Username <> '' then
-            IsolatedStorage.Get(Username + 'ID', UserNo);
+            IsolatedStorage.Get(Username + 'ID', UserNo)
+        else
+            Error('Login first to try to get Customer number from logged user!');
     end;
 
     var

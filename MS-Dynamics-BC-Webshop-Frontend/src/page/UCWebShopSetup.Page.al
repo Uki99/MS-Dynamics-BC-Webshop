@@ -1,11 +1,11 @@
 /// <summary>
-/// Page BCWeb Shop Setup (ID 50100).
+/// Page UC Web Shop Setup (ID 64900).
 /// </summary>
-page 50100 "BCWeb Shop Setup"
+page 64900 "UC Web Shop Setup"
 {
     Caption = 'Web Shop Setup';
     PageType = Card;
-    SourceTable = "BCWeb Shop Setup";
+    SourceTable = "UC Web Shop Setup";
     ApplicationArea = All;
     UsageCategory = Administration;
     InsertAllowed = false;
@@ -31,7 +31,6 @@ page 50100 "BCWeb Shop Setup"
                     field("Backend Username"; Rec."Backend Username")
                     {
                         Caption = 'Username';
-
                         ToolTip = 'Specifies the value of the Backend Username field.';
                         ApplicationArea = All;
                     }

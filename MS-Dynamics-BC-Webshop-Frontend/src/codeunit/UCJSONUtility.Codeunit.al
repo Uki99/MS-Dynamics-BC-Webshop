@@ -1,7 +1,7 @@
 /// <summary>
-/// Codeunit BCJSONUtility (ID 50104).
+/// Codeunit UC JSON Utility (ID 64901).
 /// </summary>
-codeunit 50104 "BCJSONUtility"
+codeunit 64901 "UC JSON Utility"
 {
     /// <summary>
     /// GetFieldValue.
@@ -26,7 +26,7 @@ codeunit 50104 "BCJSONUtility"
     /// </summary>
     /// <param name="Name">Text[100].</param>
     /// <returns>Return variable Customer of type Text.</returns>
-    /// Creates JSON for a new customer and returns it as a string
+    /// Creates JSON for a new dummy customer and returns it as a string
     procedure CreateCustomerJSON(Name: Text[100]) Customer: Text
     var
         CustomerJSON: JsonObject;
@@ -37,6 +37,7 @@ codeunit 50104 "BCJSONUtility"
         CustomerJSON.Add('country', 'RS');
         CustomerJSON.Add('city', 'Beograd');
         CustomerJSON.Add('postalCode', '11100');
+
         // ID for 'Domestic customers and vendors' customers.
         CustomerJSON.Add('taxAreaId', '95f441a9-8621-ec11-bb76-000d3a29933c');
 
@@ -46,15 +47,15 @@ codeunit 50104 "BCJSONUtility"
     /// <summary>
     /// CreateSalesOrder.
     /// </summary>
-    /// <param name="Customer No.">Text.</param>
+    /// <param name="CustomerNo">Text.</param>
     /// <returns>Return variable SalesHeaderJSONText of type Text.</returns>
-    procedure CreateSalesOrder("Customer No.": Text) SalesHeaderJSONText: Text
+    procedure CreateSalesOrder(CustomerNo: Text) SalesHeaderJSONText: Text
     var
         SalesOrderJsonObject: JsonObject;
     begin
         SalesOrderJsonObject.Add('number', '');
-        SalesOrderJsonObject.Add('orderDate', format(System.Today(), 0, 9));
-        SalesOrderJsonObject.Add('customerNumber', "Customer No.");
+        SalesOrderJsonObject.Add('orderDate', Format(System.Today(), 0, 9));
+        SalesOrderJsonObject.Add('customerNumber', CustomerNo);
         SalesOrderJsonObject.WriteTo(SalesHeaderJSONText);
     end;
 

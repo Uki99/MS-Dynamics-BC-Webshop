@@ -1,7 +1,7 @@
 /// <summary>
-/// Enum BCIntern (ID 50100).
+/// Enum UC Intern (ID 64900).
 /// </summary>
-enum 50100 "BCIntern"
+enum 64900 "UC Intern"
 {
     Extensible = true;
 

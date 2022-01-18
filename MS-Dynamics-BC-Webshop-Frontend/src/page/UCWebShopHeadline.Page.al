@@ -1,7 +1,7 @@
 /// <summary>
-/// Page BCRetail Headline (ID 50106).
+/// Page UC Web Shop Headline (ID 64905).
 /// </summary>
-page 50107 "BCWebShop Headline"
+page 64905 "UC Web Shop Headline"
 {
 
     Caption = 'WebShop Headline';
@@ -36,10 +36,10 @@ page 50107 "BCWebShop Headline"
 
     trigger OnOpenPage()
     var
-        BCCurrentUser: Codeunit BCCurrentUser;
+        UCCurrentUser: Codeunit "UC Current User";
     begin
-        if BCCurrentUser.GetUser() <> '' then
-            LoginMessage := 'Welcome back, ' + BCCurrentUser.GetUser() + '!'
+        if UCCurrentUser.GetUser() <> '' then
+            LoginMessage := 'Welcome back, ' + UCCurrentUser.GetUser() + '!'
         else
             LoginMessage := 'Please, login or create account to make purchase and view items!';
     end;

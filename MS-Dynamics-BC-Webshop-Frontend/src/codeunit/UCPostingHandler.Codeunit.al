@@ -1,7 +1,7 @@
 /// <summary>
-/// Codeunit BCPostingHandler (ID 50103).
+/// Codeunit UC Posting Handler (ID 64903).
 /// </summary>
-codeunit 50103 "BCPostingHandler"
+codeunit 64903 "UC Posting Handler"
 {
     /// <summary>
     /// SendToPost.
@@ -9,17 +9,17 @@ codeunit 50103 "BCPostingHandler"
     /// <param name="OrderJSON">Text.</param>
     procedure SendToPost(OrderJSON: Text)
     var
-        BCWebShopSetup: Record "BCWeb Shop Setup";
+        UCWebShopSetup: Record "UC Web Shop Setup";
         HttpClient: HttpClient;
         HttpHeaders: HttpHeaders;
         HttpContent: HttpContent;
         HttpResponseMessage: HttpResponseMessage;
         ResponseText: Text;
     begin
-        if not BCWebShopSetup.Get() then
+        if not UCWebShopSetup.Get() then
             Error('Failed to read Web Shop setup.\Please, setup the Web Shop setup page first.');
 
-        SetRequestHeader(HttpClient, BCWebShopSetup);
+        SetRequestHeader(HttpClient, UCWebShopSetup);
 
         HttpContent.GetHeaders(HttpHeaders);
         HttpContent.WriteFrom(SoapContentBody(OrderJSON));
@@ -59,7 +59,7 @@ codeunit 50103 "BCPostingHandler"
     end;
 
     // Sets request header and does authorization
-    local procedure SetRequestHeader(var httpClient: httpClient; var BCWebShopSetup: Record "BCWeb Shop Setup")
+    local procedure SetRequestHeader(var httpClient: httpClient; var BCWebShopSetup: Record "UC Web Shop Setup")
     var
         Base64Convert: Codeunit "Base64 Convert";
         AuthString: Text;
