@@ -18,6 +18,7 @@ page 64900 "UC Web Shop Setup"
             group(BackendWebService)
             {
                 Caption = 'Backend Web Service';
+
                 field("Backend Web Service URL"; Rec."Backend Web Service URL")
                 {
                     ToolTip = 'Specifies the value of the Backend Web Service URL field.';
@@ -28,6 +29,7 @@ page 64900 "UC Web Shop Setup"
                 group(BackendWebServiceLogin)
                 {
                     Caption = 'Credentials';
+
                     field("Backend Username"; Rec."Backend Username")
                     {
                         Caption = 'Username';

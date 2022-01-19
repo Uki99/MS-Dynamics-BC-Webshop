@@ -25,7 +25,7 @@ table 64901 "UC Web Shop Item"
             DataClassification = CustomerContent;
             Caption = 'Unit Price';
         }
-        field(4; Inventory; Decimal)
+        field(4; Inventory; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Inventory';

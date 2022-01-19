@@ -1,17 +1,20 @@
 /// <summary>
-/// Page BCItem-UC (ID 50125).
+/// Page UC Item (ID 50125).
 /// </summary>
-page 50125 "BCItem-UC"
+page 50125 "UC Item"
 {
     PageType = API;
-    Caption = 'itemUC';
-    APIPublisher = 'beTerna';
+    Caption = 'itemUC', Locked = true;
+    APIPublisher = 'ugljesa';
     APIGroup = 'webShop';
     APIVersion = 'v1.0';
-    SourceTable = Item;
-    DelayedInsert = true;
+    EntityCaption = 'itemUC', Locked = true;
+    EntitySetCaption = 'itemsUC', Locked = true;
     EntityName = 'itemUC';
     EntitySetName = 'itemsUC';
+    SourceTable = Item;
+    DelayedInsert = true;
+    ODataKeyFields = "No.";
 
     layout
     {
@@ -39,12 +42,12 @@ page 50125 "BCItem-UC"
                     Caption = 'Inventory';
                     ApplicationArea = All;
                 }
-                field(intern; Rec.BCIntern)
+                field(intern; Rec."UC Intern")
                 {
                     Caption = 'Intern';
                     ApplicationArea = All;
                 }
-                field(specification; Rec.BCCommentLJ)
+                field(specification; Rec."UC Comment")
                 {
                     Caption = 'Specification';
                     ApplicationArea = All;
@@ -71,57 +74,55 @@ page 50125 "BCItem-UC"
     var
         ImageDataBase64: Text;
         PictureName: Text;
-        Mime: Text;
+        Mime: Text[100];
 
     trigger OnAfterGetCurrRecord()
     begin
-        exportPictureToAPI(Rec);
+        ExportPictureToAPI();
     end;
 
-    // Exports data such as file name, file binary in base 64 and mime type to API.
-    // Only a single picture from MediaSet is exported.
-    local procedure exportPictureToAPI(var Item: Record Item)
+    local procedure ExportPictureToAPI()
     var
         TenantMedia: Record "Tenant Media";
         Base64Convert: Codeunit "Base64 Convert";
         MediaInStream: InStream;
     begin
-        if Item.Picture.Count = 0 then begin
+        if Rec.Picture.Count = 0 then begin
             ImageDataBase64 := 'No Content';
             Mime := '';
             PictureName := '';
             exit;
         end;
 
-        TenantMedia.Get(Item.Picture.Item(1));
+        // Only a single picture from MediaSet is exported.
+        TenantMedia.Get(Rec.Picture.Item(1));
         TenantMedia.CalcFields(Content);
 
         if TenantMedia.Content.HasValue() then begin
             TenantMedia.Content.CreateInStream(MediaInStream, TextEncoding::Windows);
             ImageDataBase64 := Base64Convert.ToBase64(MediaInStream);
             Mime := TenantMedia."Mime Type";
-            PictureName := Item."No." + ' ' + Item.Description + GetImgFileExtension(Mime);
+            PictureName := Rec."No." + ' ' + Rec.Description + GetImageFileExtension(Mime);
         end;
     end;
 
-    // Gets file exitension from mime type.
-    local procedure GetImgFileExtension(Mime: Text): Text
+    local procedure GetImageFileExtension(Mime: Text): Text
     begin
         case Mime of
             'image/jpeg':
-                exit('.jpg');
+                Exit('.jpg');
             'image/png':
-                exit('.png');
+                Exit('.png');
             'image/bmp':
-                exit('.bmp');
+                Exit('.bmp');
             'image/gif':
-                exit('.gif');
+                Exit('.gif');
             'image/tiff':
-                exit('.tiff');
+                Exit('.tiff');
             'image/wmf':
-                exit('.wmf');
+                Exit('.wmf');
             else
-                exit('');
+                Error('Unsupported image extension of mime type: %1', Mime);
         end;
     end;
 }

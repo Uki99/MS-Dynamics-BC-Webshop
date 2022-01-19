@@ -22,7 +22,7 @@ table 64900 "UC Cart Entry"
 
             trigger OnValidate()
             begin
-                ValidateNamePrice();
+                ValidateNameAndPrice();
             end;
         }
         field(3; "Item Name"; Text[100])
@@ -35,7 +35,7 @@ table 64900 "UC Cart Entry"
                 Rec.Validate(Amount);
             end;
         }
-        field(4; "Unit Price"; Integer)
+        field(4; "Unit Price"; Decimal)
         {
             Caption = 'Unit Price';
             DataClassification = CustomerContent;
@@ -79,18 +79,20 @@ table 64900 "UC Cart Entry"
         }
     }
 
-    trigger OnInsert()
     var
         UCCurrentUser: Codeunit "UC Current User";
+
+    trigger OnInsert()
     begin
         Rec.Username := UCCurrentUser.GetUser();
     end;
 
-    local procedure ValidateNamePrice()
+    local procedure ValidateNameAndPrice()
     var
         UCWebShopItem: Record "UC Web Shop Item";
     begin
         if Rec."Item No." <> '' then begin
+            UCWebShopItem.SetLoadFields(Name, "Unit Price");
             UCWebShopItem.Get(Rec."Item No.");
             Rec.Validate("Item Name", UCWebShopItem.Name);
             Rec.Validate("Unit Price", UCWebShopItem."Unit Price");
@@ -102,8 +104,6 @@ table 64900 "UC Cart Entry"
     /// </summary>
     /// <returns>Return value of type Decimal.</returns>
     procedure CalcTotalAmount(): Decimal;
-    var
-        UCCurrentUser: Codeunit "UC Current User";
     begin
         Rec.SetRange(Username, UCCurrentUser.GetUser());
         Rec.CalcSums(Amount);

@@ -1,7 +1,7 @@
 /// <summary>
-/// Codeunit BCWebshop Posting Service-UC (ID 50125).
+/// Codeunit UC Web Shop Posting Service (ID 50125).
 /// </summary>
-codeunit 50125 "BCWebshop Posting Service-UC"
+codeunit 50125 "UC Web Shop Posting Service"
 {
     /// <summary>
     /// PostTransaction.

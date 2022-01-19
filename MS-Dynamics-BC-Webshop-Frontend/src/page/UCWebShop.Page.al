@@ -4,8 +4,8 @@
 page 64902 "UC Web Shop"
 {
     ApplicationArea = All;
-    PageType = List;
     UsageCategory = Lists;
+    PageType = List;
     SourceTable = "UC Web Shop Item";
     Caption = 'Web Shop';
     Editable = false;
@@ -83,17 +83,6 @@ page 64902 "UC Web Shop"
                     AddItemToCart();
                 end;
             }
-            action(Checkout)
-            {
-                Caption = 'Checkout';
-                ApplicationArea = All;
-                ToolTip = 'Proceed to checkout';
-                Image = ExpandAll;
-                Promoted = true;
-                PromotedOnly = true;
-                PromotedCategory = Process;
-                RunObject = Page "UC Checkout";
-            }
             action(ClearCart)
             {
                 Caption = 'Clear Cart';
@@ -109,20 +98,31 @@ page 64902 "UC Web Shop"
                     ClearUserCart();
                 end;
             }
+            action(Checkout)
+            {
+                Caption = 'Checkout';
+                ApplicationArea = All;
+                ToolTip = 'Proceed to checkout';
+                Image = ExpandAll;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
+                RunObject = Page "UC Checkout";
+            }
         }
     }
+
+    var
+        UCCurrentUser: Codeunit "UC Current User";
 
     trigger OnOpenPage()
     var
         UCWebShopLoad: Codeunit "UC Web Shop Load";
-        UCCurrentUser: Codeunit "UC Current User";
     begin
-        // Delete everything from the table and use codeunit to send GET request to backend to retrieve product data.
-
         if UCCurrentUser.GetUser() = '' then begin
             Message('You''re not logged in. Please login to proceed.');
 
-            if (Page.RunModal(Page::"UC Login Page") = Action::LookupOK) OR (Page.RunModal(Page::"UC Login Page") = Action::LookupCancel) then begin
+            if (Page.RunModal(Page::"UC Login Page") = Action::LookupOK) or (Page.RunModal(Page::"UC Login Page") = Action::LookupCancel) then begin
                 Rec.DeleteAll(true);
                 UCWebShopLoad.Run();
             end
@@ -136,7 +136,6 @@ page 64902 "UC Web Shop"
     local procedure AddItemToCart()
     var
         UCCartEntry: Record "UC Cart Entry";
-        UCCurrentUser: Codeunit "UC Current User";
     begin
         UCCartEntry.SetRange(Username, UCCurrentUser.GetUser());
         UCCartEntry.SetRange("Item No.", Rec."No.");
@@ -158,7 +157,6 @@ page 64902 "UC Web Shop"
     local procedure ClearUserCart()
     var
         UCCartEntry: Record "UC Cart Entry";
-        UCCurrentUser: Codeunit "UC Current User";
     begin
         if Dialog.Confirm('Do you want to clear the cart?', false) then begin
             UCCartEntry.SetRange(Username, UCCurrentUser.GetUser());

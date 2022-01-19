@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Web Shop Backend">
+    <body>
+      <group id="body">
+        <trans-unit id="Page 3164295277 - Control 2644657540 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Image Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Item - Control imageDataBase64 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3164295277 - Control 2683112934 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Intern</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Item - Control intern - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3164295277 - Control 3429668174 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inventory</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Item - Control inventory - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3164295277 - Control 2920669608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mime</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Item - Control mime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3164295277 - Control 3558812865 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Item - Control name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3164295277 - Control 3179096107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Item - Control no - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3164295277 - Control 1219872333 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Picture name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Item - Control pictureName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3164295277 - Control 194955711 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specification</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Item - Control specification - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3164295277 - Control 3421409717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UC Item - Control unitPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2439911130 - Field 2791737919 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Comment</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension UC Web Shop Item Ext - Field UC Comment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2439911130 - Field 2607947328 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Intern</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension UC Web Shop Item Ext - Field UC Intern - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -3,9 +3,9 @@
 /// </summary>
 page 64901 "UC Login Page"
 {
-    PageType = Card;
     ApplicationArea = All;
     UsageCategory = Administration;
+    PageType = Card;
     Caption = 'Login';
 
     layout
@@ -81,6 +81,12 @@ page 64901 "UC Login Page"
         }
     }
 
+    var
+        UCCurrentUser: Codeunit "UC Current User";
+        Username: Text[100];
+        Password: Text[250];
+        Notification: Text;
+
     trigger OnOpenPage()
     begin
         if UCCurrentUser.GetUser() = '' then
@@ -130,10 +136,4 @@ page 64901 "UC Login Page"
         // Sets currently logged in user's Customer No. from backend so it can be refferenced from frontend when crafting transaction body
         UCCurrentUser.SetUserCustomerNo(UCJSONUtility.GetFieldValue(ReturnJSONCustomer, 'number').AsText());
     end;
-
-    var
-        UCCurrentUser: Codeunit "UC Current User";
-        Username: Text[100];
-        Password: Text[250];
-        Notification: Text;
 }

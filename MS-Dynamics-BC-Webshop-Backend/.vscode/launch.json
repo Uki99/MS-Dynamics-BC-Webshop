@@ -2,20 +2,20 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Your own server",
+            "name": "Web Shop Backend",
             "request": "launch",
             "type": "al",
-            "environmentType": "Sandbox",
-            "startupObjectId": 22,
+            "environmentType": "OnPrem",
+            "server": "http://bc-19-2/",
+            "serverInstance": "BC",
+            "authentication": "UserPassword",
+            "startupObjectId": 9006,
             "startupObjectType": "Page",
             "breakOnError": true,
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true,
-            "server": "https://bc-webshop.westeurope.cloudapp.azure.com",
-            "serverInstance": "BC",
-            "tenant": "",
-            "authentication": "UserPassword",
+            "tenant": "default"
         }
     ]
 }

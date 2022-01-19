@@ -1,3 +1,6 @@
+/// <summary>
+/// Table UC Web Shop Cue (ID 64903).
+/// </summary>
 table 64903 "UC Web Shop Cue"
 {
     Caption = 'Web Shop Cue';
